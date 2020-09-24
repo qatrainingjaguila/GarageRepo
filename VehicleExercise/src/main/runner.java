@@ -20,6 +20,8 @@ public class runner {
 		System.out.println("\r");
 		newGarage.calculateBill();
 		
+		//.getClass().getSimpleName()
+		
 	}
 
 }

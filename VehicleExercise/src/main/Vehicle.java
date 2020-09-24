@@ -1,6 +1,6 @@
 package main;
 
-public class Vehicle {
+public abstract class Vehicle { //abstract class so Vehicles cannot be instantiated
 	private int noOfWheels;
 	private String colour;
 	private String name;
@@ -15,6 +15,9 @@ public class Vehicle {
 		this.name = name;
 		numberOfCars++;
 	}
+
+	
+	abstract public void bill(); // using abstract methods which must be overridden in subclasses
 
 	public int getNoOfWheels() {
 		return noOfWheels;
