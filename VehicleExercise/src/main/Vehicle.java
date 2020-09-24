@@ -15,6 +15,10 @@ public class Vehicle {
 		this.name = name;
 		numberOfCars++;
 	}
+	
+	public void bill() {
+		
+	}
 
 	public int getNoOfWheels() {
 		return noOfWheels;

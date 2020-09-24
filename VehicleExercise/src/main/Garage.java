@@ -6,11 +6,11 @@ public class Garage {
 	
 	private List<Vehicle> vehiclesInGarage = new ArrayList<>();	
 	
-	public void addVehicle(Vehicle vehicle) {
+	public void addVehicle(Vehicle vehicle) { 
 		this.vehiclesInGarage.add(vehicle);
 	}
 	
-	public void removeVehicleByType(String type) {
+	public void removeVehicleByType(String type) {	
 		for (int i = 0; i< this.vehiclesInGarage.size();i++) {
 			Vehicle a = this.vehiclesInGarage.get(i);
 			if (type.equals("Car")) {
@@ -34,7 +34,7 @@ public class Garage {
 		
 	}
 			
-	public void removeVehiclesByID(int ID) {
+	public void removeVehiclesByID(int ID) {	
 		for (int i = 0; i< this.vehiclesInGarage.size();i++) {
 			Vehicle a = this.vehiclesInGarage.get(i);
 			if (a.getVehicleID()==(ID)){
@@ -47,15 +47,7 @@ public class Garage {
 	
 	public void calculateBill() {
 		for (Vehicle a:this.vehiclesInGarage) {
-			if (a instanceof Car) {
-				((Car)a).bill();
-			}
-			else if (a instanceof Motorcycle) {
-				((Motorcycle)a).bill();
-			}
-			else if (a instanceof Moped) {
-				((Moped)a).bill();
-			}
+			a.bill();
 		}
 	}
 	

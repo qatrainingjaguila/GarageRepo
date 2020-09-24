@@ -3,6 +3,7 @@ package main;
 public class Motorcycle extends Vehicle {
 	boolean hasTopBox;
 
+	@Override
 	public void bill(){
 		if (hasTopBox == true) {
 			System.out.println("The maintenance cost for this Motorcycle is: £100");
