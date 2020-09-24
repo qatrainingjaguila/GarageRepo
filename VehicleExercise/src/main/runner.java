@@ -3,22 +3,23 @@ package main;
 public class runner {
 
 	public static void main(String[] args) {
-		Vehicle car1 = new Car("Red","Ferrari",2);
-		Vehicle motorbike1 = new Motorcycle("Yellow","Ducati",false);
-		Vehicle moped1 = new Moped("Cream","Vespa",false);
-
-		Garage newGarage = new Garage();
-		newGarage.addVehicle(car1);
-		newGarage.addVehicle(motorbike1);
-		newGarage.addVehicle(moped1);
 		
-		newGarage.calculateBill();
-		
-		newGarage.removeVehicleByType("Moped");
-		newGarage.removeVehiclesByID(0);
-		
-		System.out.println("\r");
-		newGarage.calculateBill();
+		  Vehicle car1 = new Car("Red","Ferrari",2); 
+		  
+		  Vehicle motorbike1 = new Motorcycle("Yellow","Ducati",false); 
+		  
+		  Vehicle moped1 = new Moped("Cream","Vespa",false);
+		  
+		  Garage newGarage = new Garage(); newGarage.addVehicle(car1);
+		  
+		  newGarage.addVehicle(motorbike1); newGarage.addVehicle(moped1);
+		  
+		  newGarage.calculateBill();
+		  
+		  newGarage.removeVehicleByType("Moped"); newGarage.removeVehiclesByID(0);
+		  
+		  System.out.println("\r"); newGarage.calculateBill();
+		 
 		
 		//.getClass().getSimpleName()
 		

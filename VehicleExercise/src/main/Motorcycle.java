@@ -4,13 +4,14 @@ public class Motorcycle extends Vehicle {
 	boolean hasTopBox;
 
 	@Override
-	public void bill(){
+	public double bill(){
+		double result = 0;
 		if (hasTopBox == true) {
-			System.out.println("The maintenance cost for this Motorcycle is: £100");
+			result = 100 * this.getNoOfWheels();
 		}
 		else {
-			System.out.println("The maintenance cost for this Motorcycle is: £200");
-		}
+			result = 200 * this.getNoOfWheels();
+		}return result;
 	}
 	
 	public Motorcycle(String colour, String name, boolean hasTopBox) {
