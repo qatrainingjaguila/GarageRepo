@@ -15,6 +15,10 @@ public class Vehicle {
 		this.name = name;
 		numberOfCars++;
 	}
+
+	public void remove() {
+		
+	}
 	
 	public void bill() {
 		

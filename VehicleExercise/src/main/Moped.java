@@ -3,6 +3,7 @@ package main;
 public class Moped extends Vehicle{
 	boolean motorwayLegal = false;
 	
+	
 	@Override
 	public void bill(){
 		if (motorwayLegal == true) {
