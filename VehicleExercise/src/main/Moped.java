@@ -5,13 +5,15 @@ public class Moped extends Vehicle{
 	
 	
 	@Override
-	public void bill(){
+	public double bill(){
+		double result = 0;
 		if (motorwayLegal == true) {
-			System.out.println("The maintenance cost for this Moped is: £10");
+			result = 10 * this.getNoOfWheels();
 		}
 		else {
-			System.out.println("The maintenance cost for this Moped is: £20");
+			result = 20 * this.getNoOfWheels();
 		}
+		return result;
 	}
 	
 

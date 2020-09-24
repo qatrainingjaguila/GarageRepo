@@ -60,12 +60,16 @@ public class Garage {
 		
 					
 	
-	public void calculateBill() {
+	public double calculateBill() {
+		
+		double total = 0;
 		
 		for (Vehicle a:this.vehiclesInGarage) {
 			
-			a.bill();
+			total = total + a.bill();
 		}
+		System.out.println("Your total is " + total);
+		return total;
 	}
 	
 	public Garage() {

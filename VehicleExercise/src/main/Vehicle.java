@@ -17,7 +17,7 @@ public abstract class Vehicle { //abstract class so Vehicles cannot be instantia
 	}
 
 	
-	abstract public void bill(); // using abstract methods which must be overridden in subclasses
+	abstract public double bill(); // using abstract methods which must be overridden in subclasses
 
 	public int getNoOfWheels() {
 		return noOfWheels;

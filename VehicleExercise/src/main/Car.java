@@ -5,8 +5,9 @@ public class Car extends Vehicle {
 	
 	
 	@Override
-	public void bill(){
-		System.out.println("The maintenance cost for this Car is: £"+ 120 * noOfDoors);
+	public double bill(){
+		double result = 120 * noOfDoors;
+		return result;
 	}
 	
 	public Car(String colour, String name, int doors) {
