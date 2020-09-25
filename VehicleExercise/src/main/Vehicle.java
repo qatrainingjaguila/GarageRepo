@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 public abstract class Vehicle { //abstract class so Vehicles cannot be instantiated
 	private int noOfWheels;
 	private String colour;
@@ -18,7 +20,9 @@ public abstract class Vehicle { //abstract class so Vehicles cannot be instantia
 
 	
 	abstract public double bill(); // using abstract methods which must be overridden in subclasses
-
+	
+	abstract public void create(Scanner input);
+	
 	public int getNoOfWheels() {
 		return noOfWheels;
 	}
