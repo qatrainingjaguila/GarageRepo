@@ -8,7 +8,8 @@ public class Garage {
 	
 	public void addVehicle(Vehicle vehicle) { 
 		
-		this.vehiclesInGarage.add(vehicle);
+		
+		this.getVehiclesInGarage().add(vehicle);
 	}
 	
 	public void removeVehicleByType(String type) {	
@@ -35,25 +36,25 @@ public class Garage {
 		}
 		
 	}*/
-		for (Vehicle vehicle: this.vehiclesInGarage) {
+		for (Vehicle vehicle: this.getVehiclesInGarage()) {
 			
 			if (vehicle.getClass().getSimpleName().equalsIgnoreCase(type)) {
 				
 				toRemove.add(vehicle);
 			}
 		}
-		this.vehiclesInGarage.removeAll(toRemove);
+		this.getVehiclesInGarage().removeAll(toRemove);
 	}
 			
 	public void removeVehiclesByID(int ID) {	
 		
-		for (int i = 0; i< this.vehiclesInGarage.size();i++) {
+		for (int i = 0; i< this.getVehiclesInGarage().size();i++) {
 			
-			Vehicle a = this.vehiclesInGarage.get(i);
+			Vehicle a = this.getVehiclesInGarage().get(i);
 			
 			if (a.getVehicleID()==(ID)){
 				
-				this.vehiclesInGarage.remove(a);
+				this.getVehiclesInGarage().remove(a);
 			}
 		}
 	}
@@ -64,7 +65,7 @@ public class Garage {
 		
 		double total = 0;
 		
-		for (Vehicle a:this.vehiclesInGarage) {
+		for (Vehicle a:this.getVehiclesInGarage()) {
 			
 			total = total + a.bill();
 		}
@@ -75,6 +76,10 @@ public class Garage {
 	public Garage() {
 		
 		this.vehiclesInGarage = new ArrayList<>();
+	}
+
+	public List<Vehicle> getVehiclesInGarage() {
+		return vehiclesInGarage;
 	}
 
 }
